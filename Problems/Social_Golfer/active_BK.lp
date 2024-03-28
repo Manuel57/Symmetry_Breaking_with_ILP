@@ -27,5 +27,8 @@ lessthan(X,Y) :- week(X), week(Y), X <Y.
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 %% Iteration n None
-%% From files: 2-2-2 copy 2.lp - 2-2-2 copy.lp - 2-2-2.lp - 3-4-3.lp
+%% From files: 1-4-1.lp - 2-2-1.lp - 2-2-2.lp - 2-2-3.lp - 2-4-1.lp
+ :- lessthan(V1,V3), plays(V1,V2,V3).
+ :- meets(V1,V2,V3), not next_player(V1,V2), not lessthan(V3,V2).
+ :- lessthan(V2,V1), plays(V1,V2,V3), not lessthan(V3,V1).
 
